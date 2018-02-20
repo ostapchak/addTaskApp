@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.min.js"></script>
+	<script src="main.js"></script>
+	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div ng-controller="Ctrl1" id="wrap" >
+		<div class="content">
+			<div class="tasks" >
+				<header class="header">Items</header>
+				<div class="addTask">
+					<input type="text" ng-model="task" class="inputAdd" placeholder="Type name here...">
+					<button ng-click="addTask(task)" class="btnAdd">Add new</button>
+				</div> <!-- addTask -->
+				<ul>
+					<div ng-repeat="item in storage track by $index">
+						<div ng-click="checkTask(item)" class="list" ng-class="{activeList:item.comments==commentsStorage}">
+							<li  class="taskLi">{{item.name}} <span class="badge myBadge" ng-show="item.comments.length>0">{{item.comments.length}}</span></li>
+							<button ng-click="delTask($index)" class="btnDel">Delete</button>
+						</div> <!-- list -->
+					</div>
+				</ul>
+			</div>
+			<section ng-show="visible" class="row comments">
+				<header class="header">Comments</header>
+				<article ng-repeat="item in commentsStorage track by $index">
+					<p>{{item}}</p>
+				</article>
+				<form>
+					<textarea  class="form-control txtArea" rows="4" ng-model="comment"  ng-keypress="addComment($event,comment)"></textarea>
+				</form>
+			</section> <!-- comments -->
+		</div> <!-- content -->
+	</div> <!-- wrap -->
+</body>
+</html>

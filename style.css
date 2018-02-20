@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#wrap .content{
+	display: flex;
+	margin: 35px;
+}
+ .header{
+	font-family : 'Open Sans';
+	font-weight: 300;
+	font-size : 36px;
+	color : rgb(86, 90, 105);
+	margin-bottom: 27px;
+}
+.tasks{
+	box-shadow: 0 0 10px 2px rgb(204, 204, 204);
+	min-height: 550px;
+	padding: 20px 15px 0px 25px;
+
+}
+.list{
+	display: flex;
+	padding: 10px 0px 10px 0px;
+	border-bottom: 1pt rgb(242, 242, 242) solid;
+	cursor: pointer;
+}
+.list:hover{
+	border-bottom: 2px rgb(255, 48, 90) solid;
+	transition: 0.5s;
+}
+.activeList{
+	border-left: 5px rgb(255, 48, 90) solid;
+	padding-left: 10px;
+}
+.taskLi{
+	list-style-type: none;
+	flex-grow: 1;
+	margin: auto;
+	font-family : 'Open Sans';
+	font-weight: 600;
+}
+.myBadge{
+	background-color: rgb(39, 204, 192);
+	margin-left: 10px;
+}
+.addTask{
+	margin-bottom: 10px;
+}
+.inputAdd{
+	width: 290px;
+	height: 37px;
+	border: 2px rgb(204, 204, 204) solid;
+	border-radius: 3px;
+	padding-left: 5px;
+	font-family : 'Open Sans';
+}
+.btnAdd{
+	cursor: pointer;
+	font-family : 'Open Sans';
+	font-weight: 600;
+	font-size : 16px;
+	color : rgb(255, 255, 255);
+	width: 132px;
+	height: 38px;
+	border: none;
+	background-color: rgb(39, 204, 192);
+	border-radius: 3px;
+}
+.btnAdd:hover{
+	border:2px rgb(39, 204, 192) solid;
+	border-radius: 3px;
+	background-color: white;
+	color: rgb(39, 204, 192);
+	font-weight: bold;
+	transition: 0.3s;
+}
+.btnDel{
+	cursor: pointer;
+	font-family : 'Open Sans';
+	font-weight: 400;
+	font-size : 16px;
+	color : #FF305A;
+	color : rgb(255, 48, 90);
+	width: 97px;
+	height: 34px;
+	border: 2px rgb(255, 48, 90) solid;
+	border-radius: 3px;
+	background-color: white;
+}
+.btnDel:hover{
+	background-color: rgb(255, 48, 90);
+	color: white;
+	transition: 0.3s;
+}
+.comments{
+	box-shadow: 0 0 10px 2px rgb(204, 204, 204);
+	padding: 20px 15px 0px 25px;
+	margin-left: 20px;
+	width: 400px;
+	height: 1%;
+}
+.comments article{
+	border-bottom: 1pt rgb(242, 242, 242) solid;
+	padding-top: 10px;
+}
+.comments article p{
+	font-family : 'Open Sans';
+}
+.txtArea{
+	margin-bottom: 20px;
+	resize: none;
+	height: 500px;
+	font-family : 'Open Sans';
+}
